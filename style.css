@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: rgba(0, 49, 11, 0.986);
+  padding: 25px 5%;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav-logo a {
+  font-size: 35px;
+  text-decoration: none;
+  color: #fcfcfc;
+  font-weight: 600;
+}
+
+nav .nav-lists {
+  display: flex;
+  list-style: none;
+}
+
+.nav-lists .list a {
+  position: relative;
+  font-size: 20px;
+  color: #fcfcfc;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 60px;
+  padding: 10px 0;
+}
+
+.nav-lists .list a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fcfcfc;
+  transition: width 0.3s ease;
+}
+
+.nav-lists .list a:hover::after {
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 15px;
+  background-color: #f9f9f9;
+}
+
+.search-box input[type="search"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 12px;
+  background-color: transparent;
+  color: #333;
+}
+
+.search-box input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.search-box button {
+  border: none;
+  background: none;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #555;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.search-box button:hover {
+  color: #007bff;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(bgdepan.png) no-repeat center center / cover;
+}
+
+.home .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fcfcfc;
+  padding: 20px;
+}
+
+.home .container h1 {
+  font-size: 50px;
+  font-weight: 500;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.home .container h2 {
+  font-size: 35px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.tentang-pusaka {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 20px;
+  height: 100vh;
+}
+
+.tentang-pusaka .image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+  margin: 200px 50px 0;
+  padding-left: 300px;
+}
+
+.tentang-pusaka .image-container img {
+  width: 37%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.tentang-pusaka .image-container img:hover {
+  transform: scale(1.05);
+}
+
+.tentang-pusaka .content-tentang {
+  margin-left: -100px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.tentang-pusaka .content-tentang p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.tentang-pusaka .content-tentang p span {
+  font-size: 80px;
+  font-weight: 600;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(51, 105, 38);
+}
+
+.bergabung {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  margin-top: 200px;
+}
+
+.bergabung .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url(images/bg-gabung.jpeg) no-repeat center center / cover;
+  padding: 3rem;
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+  color: #fcfcfc;
+  box-shadow: 29px 29px 60px 0px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  cursor: pointer;
+}
+
+.bergabung .container .content-bergabung h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.bergabung .container .link-bergabung {
+  border: 2px solid #333;
+  padding: 15px 10px;
+  border-radius: 18px;
+  background-color: #fcfcfc;
+}
+
+.bergabung .container .link-bergabung a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.bergabung .container .link-bergabung a:hover{
+  color: #007bff;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #034103a1;
+  color: #fcfcfc;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .footer-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-sosmed {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 1rem 0;
+}
+
+.footer-sosmed .social-media-link {
+  font-size: 1.7rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-sosmed .social-media-link:hover {
+  color: #e95721; 
+  transform: scale(1.1);
+}
+
+.footer-logo img {
+  width: 100px;
+  margin: 1rem 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+} 
